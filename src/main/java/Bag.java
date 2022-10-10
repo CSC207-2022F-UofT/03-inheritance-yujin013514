@@ -85,6 +85,7 @@ public abstract class Bag {
     public boolean addItem(String item){
         if(numberOfContents < capacity) {
             contents[numberOfContents] = item ;
+            numberOfContents +=1;
         }
         return true;
     }
@@ -111,6 +112,7 @@ public abstract class Bag {
         else{
             String value = contents[numberOfContents - 1];
             this.contents[numberOfContents - 1] = null;
+            numberOfContents -=1;
             return value;
         }
 

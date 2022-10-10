@@ -31,13 +31,13 @@
  *       See the tests in test/CrossBodyBagTest.java for examples.
  */
 
+import java.sql.SQLOutput;
+
 public class CrossbodyBag extends Bag {
 
-    private String color;
 
     private int numberOfStraps;
 
-    private int capacity;
 
     public CrossbodyBag(String color, int capacity, int numberOfStraps) {
 
@@ -59,9 +59,8 @@ public class CrossbodyBag extends Bag {
 
     @Override
     public String toString() {
-
-        String temp = this.color + " Crossbody Bag with "+ this.numberOfStraps + " straps (" + this.getNumberOfContents() +
-                " / " + this.capacity + ")";
+        String temp = getColor() + " Crossbody Bag with "+ this.numberOfStraps + " straps (" + this.getNumberOfContents() +
+                " / " + getCapacity() + ")";
 
         return temp;
     }
